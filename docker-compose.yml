@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  web-storage:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - AUTH_SECRET=${AUTH_SECRET}
+      - ADMIN_USERNAME=${ADMIN_USERNAME}
+      - ADMIN_PASSWORD=${ADMIN_PASSWORD}
+      - NEXTAUTH_URL=${NEXTAUTH_URL}
+    volumes:
+      - ./data:/app/data
+      - ./public/uploads:/app/public/uploads
+    restart: unless-stopped

@@ -1,0 +1,17 @@
+name = "web-storage"
+compatibility_date = "2024-11-27"
+pages_build_output_dir = ".vercel/output/static"
+
+# KV Namespace for file metadata
+[[kv_namespaces]]
+binding = "FILE_METADATA"
+id = "your-kv-namespace-id"  # Replace after creating KV namespace
+
+# R2 Bucket for file storage
+[[r2_buckets]]
+binding = "FILE_STORAGE"
+bucket_name = "web-storage-files"  # Replace with your bucket name
+
+# Environment variables (set these in Cloudflare dashboard)
+[vars]
+NEXTAUTH_URL = "https://storage.yourdomain.com"  # Your subdomain
