@@ -6,9 +6,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "pages:build": "npx @opennextjs/cloudflare",
-    "preview": "npm run pages:build && wrangler pages dev",
-    "deploy": "npm run pages:build && wrangler pages deploy",
+    "pages:build": "next build",
+    "pages:deploy": "npm run build && wrangler pages deploy .next --project-name=web-storage",
+    "preview": "npm run build && wrangler pages dev .next",
     "start": "next start",
     "lint": "next lint"
   },
