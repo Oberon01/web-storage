@@ -1,4 +1,4 @@
-name = "web-storage"
+name = "storage"
 compatibility_date = "2024-11-27"
 pages_build_output_dir = ".vercel/output/static"
 
