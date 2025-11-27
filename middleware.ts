@@ -5,4 +5,4 @@ export const config = {
 }
 
 // Make middleware work on Cloudflare edge
-export const runtime = 'edge'
+export const runtime = 'experimental-edge'
